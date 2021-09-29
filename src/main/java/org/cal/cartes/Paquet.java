@@ -27,12 +27,7 @@ public class Paquet {
     }
 
     public void brasser(){
-        for(int i = 0; i < paquet.size(); i++) {
-            int newIndex = (int)(Math.random() * paquet.size());
-            Carte tmp = paquet.get(i);
-            paquet.set(i, paquet.get(newIndex));
-            paquet.set(newIndex, tmp);
-        }
+        Collections.shuffle(paquet);
     }
 
     public Carte pige(){
